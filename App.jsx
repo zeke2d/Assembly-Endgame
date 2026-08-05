@@ -1,9 +1,17 @@
 import React from "react"
 
-export default function Hangman() {
+/*
+Add a header with the game title and description.
+*/
+
+export default function AssemblyEndgame() {
     return (
         <main>
-            Game goes here
+            <header>
+                <h1>Assembly: Endgame</h1>
+                <p>Guess the word within 8 attempts to keep the 
+                programming world safe from Assembly!</p>
+            </header>
         </main>
     )
 }
