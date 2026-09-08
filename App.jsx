@@ -29,6 +29,11 @@ export default function AssemblyEndgame() {
                 [...prevLetters, letter]
         )
     }
+    
+    function startNewGame() {
+        setCurrentWord(getRandomWord())
+        setGuessedLetters([])
+    }
 
     const languageElements = languages.map((lang, index) => {
         const isLanguageLost = index < wrongGuessCount
@@ -159,7 +164,11 @@ export default function AssemblyEndgame() {
                 {keyboardElements}
             </section>
 
-            {isGameOver && <button className="new-game">New Game</button>}
+            {isGameOver && 
+                <button 
+                    className="new-game" 
+                    onClick={startNewGame}
+                >New Game</button>}
         </main>
     )
 }
